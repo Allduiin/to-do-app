@@ -1,4 +1,4 @@
-package com.cashir.todolist
+package com.learn.todolist
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
