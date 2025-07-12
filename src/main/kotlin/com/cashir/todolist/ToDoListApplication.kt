@@ -1,11 +1,11 @@
-package com.cashir.todo
+package com.cashir.todolist
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ToDoApplication
+class ToDoListApplication
 
 fun main(args: Array<String>) {
-    runApplication<ToDoApplication>(*args)
+    runApplication<ToDoListApplication>(*args)
 }

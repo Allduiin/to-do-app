@@ -10,7 +10,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/tododb
     username: postgres
-    password: your_password
+    password: postgres
 
   elasticsearch:
     uris: http://localhost:9200
@@ -20,6 +20,4 @@ spring:
       host: localhost
       port: 6379
     mongodb:
-      host: localhost
-      port: 27017
-      database: todo_app
+      uri: mongodb://localhost:27017/todo_app

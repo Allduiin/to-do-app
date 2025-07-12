@@ -1,0 +1,40 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: pg-todo
+    environment:
+      POSTGRES_DB: tododb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  mongodb:
+    image: mongo:6
+    container_name: mongo-todo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  redis:
+    image: redis:7
+    container_name: redis-todo
+    ports:
+      - "6379:6379"
+
+  elasticsearch:
+    image: elasticsearch:8.8.2
+    container_name: es-todo
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+
+volumes:
+  pg-data:
+  mongo-data:
